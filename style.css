@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: rgba(0, 0, 0, 0.907);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.body{
+    background-color: rgba(0, 0, 0, 0.907);
+}
+
+.testos{
+    padding: 8px;
+    font-family:'Wix Madefor Text', sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.907);
+}
+
+.esempio{
+color: rgb(1, 172, 251)
+}
+
+.titolo{
+    color: red;
+}
+
+.esercizio{
+    color: rgb(8, 185, 5);
+}
+
+.dato{
+    color: rgb(8, 185, 5);
+    padding-right: 20px;
+}
+
+.es{
+    padding: 1px;
+    background-color: rgba(255, 255, 255, 0.17);
+    border-radius: 8px;
+}

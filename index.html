@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./appunti.ico">
+    <title>Appunti</title>
+</head>
+<body class="body">
+<div class="testos">
+    <p class = "titolo">STRINGHE, NUMERi E ALTRI TIPI DI DATI IN JAVASCRIPT</p>
+    in javascript ci sono 5 tipi di dati primitivi:<br>
+    numeri, stringhe, boleani,null e undefinde e gli oggetti.<br>
+    javascript converte un primitivo nel corrispondente oggetto<br>
+
+    <p class = esempio>esempio:</p>
+
+    <div class="es"><code class = esercizio>var nomeMaiuscolo = "Marco".toUpperCase();<br>
+    console.log({nomeMaiuscolo});<br><br>
+    var nomeMinuscolo = nomeMaiuscolo.toLocaleLowerCase();<br>
+    console.log({nomeMinuscolo});</code></div><br>
+    
+    a partire dal tipo primitivo stringa, javascript crea il corrispondente oggetto string,<br> 
+    invoca il metodo toUppercase() per ottenere la versione stringa.<br>
+    contribuisce a creare non poca confisione nella distinzione tra dati primititvi e oggetti, <br> 
+    non sonopochi a semplificare sostenendo che in realtà in javascript tuutp è oggetto.
+
+    <p class = "titolo">STRINGHE IN JAVASCRIPT</p>
+
+    una stringa è una sequenza di caratteri delimitata da dopppi o singoli apici<br>
+
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>var stringaNum1 = ("stringa num 1");<br>
+    var stringaNum2 = ('stringa num 2');<br><br>
+    console.log({stringaNum1});<br>
+    console.log({stringaNum2});</code>
+
+    <p class = "titolo">NUMERI IN JAVASCRIPT</p>
+
+    javascript ha un unico tipo di dato numerico. ciè non c'è distinzione formale, esempio tra intero e decimale
+    
+    <p class = esempio>esempio:</p>
+    
+    <code class = esercizio>var interoNegativo = -3;<br>
+    var zero = 0;<br>
+    var interoPositivo = 333;<br><br>
+    console.log({interoNegativo});<br>
+    console.log({zero});<br>
+    console.log({interoPositivo});</code><br><br>
+    
+    stessa cosa si può fare con i numeri scientifici, orrale, esadecimale e con le virgole.<br>
+    ogni valoreche va al di fuori dell'intervallo rappresentabile non genera un'eccezione ma viene <br> 
+    rappresentato da due valori speciali:<br> <br>
+
+    <code class = esercizio>infinity (infinito positivo)<br>
+    -infinity (infinito negativo)<br></code> <br>
+
+    ogni valore che ha un precisione maggiore di quella rappresentabile viene considerata unguale a zero.<br>
+    un altro valore numerico è NaN (not a number) che indica un valore numerico non defito.
+
+    <p class = "titolo">I TIPI DI DATO NULL, UNDEFINED E BOOLEANO</p>
+    javascript prevete 2 tipi di dato speciali per rappresentare valori nulli e non definiti.<br>
+    il tipo dato null prevede  il solo valore null, che rapresenta un valore che non rientra tra i tipi di dato <br>
+    del linguaggi.
+    
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>var x = (null); <br> console.log({x});</code><br><br>
+    
+    il valore null è diverso dal valore numerico 0 o dalla stringa vuota. infatti questultimi appartengono a <br>
+    tipi di numero stringa, mentr null è un tipo a se stante.<br>
+    il tipo undefined rappresenta un valore che non esiste ed è il valore di una variabile non inizializzata a <br>
+    cui non è stato assegnato nessin valore.<br>
+    il booleano prevededue soli valori: vero e valso; true e folse; 1 e 0; (tutti modi per dire vero e falso).
+
+    <p class = "titolo">TIPIZZAZIONE DEBOLE</p>
+
+    javascript è un linguaggio a tipizzazione depore o dinamica. significa che quando dichiariamo una variabile, <br>
+    non ne specifichiamo il tipo di dato che può contenere, può cambaire durante lo script.<br>
+    quando dichiariamo una variabile senza specifichedi un valore, a questa ciene assegnato il valore undefined. <br>
+    il valore può cambaire tramite le nostre istruzionied assumere tipi diversi di dato.
+    
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>var miaVariabile;<br>
+    miaVariabile = 3;<br>
+    miaVariabile = null;<br>
+    miaVariabile = "tre";<br>
+    miaVariabile = true;<br><br>
+    console.log({miaVariabile});</code> <br><br>
+
+    l'assegnamento puù comunque avvvenire direttamente nella dichiarazione.
+
+    <p class = "titolo">ESPRESSIONIE OPERATORI</p>
+
+    un espressione è una combinazione di valori, variabili ed operatori che rappresentano un valore
+    
+    <p class = esempio>esempio:</p>
+    <code class = esercizio>x + 1</code><br><br>
+    
+    nel caso si tratta di un espressione che combina una variabile x ed il valore numerico 1 tramite <br>
+    l'operatore + (più) per ottenere l'incremento di un unità del valore x. <br>
+    è evidente che un ruolo fondamentale nelle espressioni è assunto dagli operatori in base al numero di <br>
+    valori che possono combinare uno, due o tre valori.<br>
+
+    <p class = "titolo">OPERATORI ARITMETICI</p>
+
+    per quel che riguarda il tipo di dato numerico, abbiamo gli operatori aritmetici, che consentono la <br>
+    combinazione di valori numerici.<br>
+    
+    <p class = esempio>esempio:</p>
+    <code>
+        <table>
+            <tr><td class="dato">operatore</td><td class="dato">nome</td></tr>
+            <tr><td class="dato">+</td><td class="dato">addizione</td></tr>
+            <tr><td class="dato">-<td class="dato">sottrazione</td></td>
+            <tr><td class="dato">/<td class="dato">divisione</td></td>
+            <tr><td class="dato">*<td class="dato">moltiplicazione</td></td>
+            <tr><td class="dato">%<td class="dato">modulo o resto</td></td>
+        </table>
+    </code>
+    <p class = esempio>esempio:</p>
+    <code class = esercizio>9/4<br>9%4 + 5 + 10</code> <br> <br>
+    seguono le regole di precedenza matematica<br><br>
+    <code class = esercizio>(4 +5) * (6+7)<br>4 + 5 * 6 + 7</code><br><br>
+    gli operatori aritmetici prevedono tre operatori unari:<br><br>
+    <code>
+        <table>
+            <tr><td class="dato">operatore</td><td class="dato">nome</td></tr>
+            <tr><td class="dato">-</td><td class="dato">negazione</td></tr>
+            <tr><td class="dato">++<td class="dato">incremento</td></td>
+            <tr><td class="dato">--<td class="dato">decremento</td></td>
+        </table> <br>
+    
+    la negazione consente di ottenere un valore negativo di un numero. ad esempio, -x è il valore <br>
+    negativo del valore numerico rappresentato dalla variabilex.<br>
+    gli operatori incrementano e decrementano sono applicabili soltanto a variabili e consentono di <br>
+    ottenere un valore rispettivamente aumentato o diminuito di uno.<br>
+    viene eseguita prima della valutazione
+    
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>var x = (3);<br>var y = (x++);<br>console.log({x} + {y})</code><br><br>
+    
+    il valore della variabile x verrà assegnato alal variabile y e soltanto sucessivamente x verrà incrementato <br>
+    di uno.
+
+    <p class = "titolo">OPERATORI RELAZIONARI</p>
+    
+    gli operatori relazionari sono quelli utilizzati per il confronto tra valori:
+    <br><br>
+    <code>   
+        <table>
+            <tr><td class="dato">operatore</td><td class="dato">nome</td></tr>
+            <tr><td class="dato"><</td><td class="dato">minore</td></tr>
+            <tr><td class="dato"><=<td class="dato">minore o uguale</td></td>
+            <tr><td class="dato">><td class="dato">maggiore</td></td>
+            <tr><td class="dato">>=<td class="dato">maggiore o uguale</td></td>
+            <tr><td class="dato">==<td class="dato">uguale</td></td>
+            <tr><td class="dato">!=<td class="dato">diverso</td></td>
+            <tr><td class="dato">===<td class="dato">estremamente uguale</td></td>
+            <tr><td class="dato">!==<td class="dato">estremamente diverso</td></td>
+        </table> <br>       
+    </code>    
+    le espressioni che utilizzano gli operatori relazionari restuituiscono ub valore booleano in base <br> 
+    all' esito del confronto. <br>
+
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>4 > 2 //true<br>5 != 4 + 1 //folse</code><br><br>
+
+    il significato della maggior parte degli operatori devrebbe essere abbastanza intuitivo.<br>
+    gli operatori logici consentono la combinazione di espressione booleane:
+    <br><br>
+    <code>
+        <table>
+            <tr><td class="dato">operatore</td><td class="dato">nome</td></tr>
+            <tr><td class="dato">&&</td><td class="dato">and</td></tr>
+            <tr><td class="dato">||<td class="dato">or</td></td>
+            <tr><td class="dato">!<td class="dato">not</td></td>
+        </table>
+    </code>           
+
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>(5 > 2) && (3 !=4) // true<br>
+    true || (4 >= 6) // true<br>
+    !(5==5) // false</code>
+    
+    <p class = "titolo">OPERATORI DI ASSEGNAMENTO</p>
+
+    l' espressione di assegnamento restituisce essa stessa un valore dell' espressione assegnata alla variabile:
+    
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>x = 3 + 5;<br>
+    y = (x = 3 + 5);<br>
+    (x = 5? "cinque" : "diverso da cinque")</code>
+
+    <p class = "titolo">OPERATORE '?', PER ASSEGRAMENTI CONDIZIONALI</p>
+
+    l' unico operatore ternario da javascript è l' operatore condizionale.<br>
+    esse restituisce un valore in base ad una espressione boleana. la sua sintassi è:<br><br>
+
+    <code class = esercizio>condizione ? valore1 : valore2<br>
+    x%2 == 0 ? "pari" : "dispari"<br></code>
+
+    <p class = "titolo">OPERATORI DI ESSEGNAMENTO COMPOSTI</p>
+
+    oltre all (=), esistono altri operatori di assegnamento derivanti dalla combinazione degli operatori <br>
+    aritmetici e degli operatori sui bit con il simbolo =. <br>
+    essi rappresentano uanabbreviazione <br>
+
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>x += 3;</code>
+
+    <p class = esempio>equivalente:</p>
+
+    <code class = esercizio>x = x + 3;</code><br><br>
+
+    analogicamente abbiamo a disposizione gli operatori come:<br><br>
+
+    <code>
+           <table>
+            <tr><td class="dato">forma compatta</td><td class="dato">scrittura equivalente</td></tr>
+            <tr><td class="dato">x += y</td><td class="dato">x = x + y</td></tr>
+            <tr><td class="dato">x -= y<td class="dato">x = x - y</td></td>
+            <tr><td class="dato">x *= y<td class="dato">x = x * y</td></td>
+            <tr><td class="dato">x /= y<td class="dato">x = x / y</td></td>
+            <tr><td class="dato">x %= y</td><td class="dato">x = x % y</td></td>
+        </table> 
+    </code><br>
+
+    l' uso di queste espressioni rende più compatibile il codice ma non sempre altrttanto leggibile.
+    <p class = "titolo">OPERATORI SU STRINGHE</p>
+
+    l' unico operatore su stringhe specifico è operatore concatenazione. esso consente di creare una nuova <br>
+    stringha come risultato delal concatenazione.<br>
+    esso consente di creare una nuova stringa come risultato della concatenazione ed è rapprensentato dal <br>
+    simbolo del "più" (+): <br><br>
+
+    <code class = esercizio>"piano" + "forte" // "pianoforte"</code>
+
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>var strumento1 = "piano";<br>
+    var strumento2 = "forte";<br><br>
+    console.log({strumento1} + {strumento2});</code><br>
+    
+    <p class = esempio>oppure:</p>
+
+    <code class = esercizio>var strumento= "piano";<br>
+    strumento += "forte";<br>
+    console.log({strumento})</code><br><br>
+
+    il suo utilizzo è abbastanza immediato, ma con le variabili si possono ottenere risultati non <br>
+    prebisti dal momento che il simbolo utilizato è lo stesso dell' addizione. <br>
+    
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>x + y</code><br>
+
+    <p class = "titolo">CONVERSIONI TRA TIPI DI VARIABILI</p>
+
+    effettua conversioni implicite
+    
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>var x = "12";<br>    
+    var y = "13";<br>
+    var calcolo =  x * y;<br><br>
+    console.log({calcolo})</code><br><br>
+
+    conversione implicita delle variabili in booleano<br>
+
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>if (3) {<br><br>
+        console.log("vero")<br>
+    }else{<br><br>
+        console.log("falso");<br>
+    }<br>
+    operatore terrario<br>
+    let ter1 = 3 ? "vero" : "falso";<br>
+    console.log({ter1});<br><br>
+    let ter2 = 0 ? "vero" : "falso";<br>
+    console.log({ter2});<br><br>
+    let ter3 = undefined ? "vero" : "falso";
+    console.log({ter3});<br><br>
+    let ter4 = null ? "vero" : "falso";<br>
+    console.log({ter4});<br><br>
+    let ter5 = true ? "vero" : "falso"<br>
+    console.log({ter5})<br><br>
+    let ter6 = false ? "vero" : "falso";<br>
+    console.log({ter6})<br><br>
+    let ter7 = NaN ? "vero" : "falso";<br>
+    console.log({ter7})<br><br>
+    let ter8 = Infinity ? "vero" : "falso"<br>
+    console.log({ter8})<br><br>
+    let ter9 = (4 * 2) % 3 - (9 % 0) ? "vero" : "falso"<br>
+    console.log({ter9})<br><br>
+    let ter10 = 5=="5" ? "vero" : "falso";<br>
+    console.log({ter10})<br><br>
+    let ter11 = 3!==2 ? "vero" : "falso";<br>
+    console.log({ter11})<br><br>
+    let ter12 = 14 > 12 ? "vero" : "falso";<br>
+    console.log({ter12})</code><br><br>
+
+    <p class = "titolo">BLOCCHI DI CODICE</p>
+
+    nei blocchi di codice più istruzzioni possono essere ragruppate esempio:
+    <br> <br>
+
+    <code class = esercizio>{<br>
+        x = x + 3;<br>
+        x = x * 2;<br>
+    }</code><br> <br>
+    al termine del blocco non va inserito (;)
+
+    <p class = "titolo">ISTRUZZIONI CONDIZZIONALI: IF</p>
+
+    le istruzioni condizionali sono una categoria di istruzioni che consentono di eseguire blocchi di <br>
+    codice alternativi in base ad una conizione, consentono script di prendere senso alle decisioni. <br>
+    javascript prevede 2 istuzioni condizionali:<br>
+
+    <code class = esercizio>- if semplice<br>
+    - ifa alternativa (else)<br>
+    - if a cascata (if esle if else)</code> <br>
+
+    la forma if pura esegue un blocco di codice solo se una condizione è vera:
+    
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>if (condizione) {<br>istruzioni<br>
+    }</code><br> <br>
+
+    dove condizione è un'espressione booleana e istruzioni rappresenta appunto la sequenza di <br>
+    istruzioni da eseguire nel caso in cui la condizione sia veraif eslse:<br>
+    if eslse viene eseguito un blocco di codice oppure un altro valore delal condizione: <br>
+
+    <p class = esempio>esempio:</p>
+
+    <code class = esercizio>if: (condizione) {<br>
+        istruzioni1<br>
+    } else {<br>
+        istruzioni2<br>
+    }</code><br> <br>
+
+    Se condizione è vera vengono eseguite le istruzioni del blocco istruzioni1 altrimenti viene eseguito <br>
+    il blocco istruzioni2<br>
+    if a cascata:<br>
+    mette a disposizione più alternative:
+
+    <p class = esempio>esempio:</p>
+    
+    <code class = esercizio>if (condizione1) {<br>
+        istruzioni1<br>
+    } else if (condizione2) {<br>
+        istruzioni2<br>
+    } else {<br>
+        istruzioni3
+    }</code><br><br>
+    In questo caso, se condizione1 è vera viene eseguito il blocco istruzioni1.<br>
+     Se condizione1 non è soddisfatta viene verificata condizione2 e in base al suo valore <br>
+     verrà eseguito il blocco istruzioni2 o istruzioni3<br>
+    le if si usano per dare condizione eistruzioni per cambiare variare le opzioni <br>
+
+    <p class = esempio>esempi pratici:</p>
+
+    if:<br>
+    <code class = esercizio>if else:<br> if (x >= 37) {<br>
+        messaggio = "Hai la febbre.\n";<br>
+        messaggio = messaggio + "Temperatura: " + x + " gradi."; <br>
+    }</code><br><br>
+    if else:<br>
+    <code class = esercizio>if else:<br>
+    if (x%2 == 0) {<br>
+        messaggio = x + " è pari";<br>
+    } else {
+        messaggio = x + " è dispari";<br>
+    }</code> <br> <br>
+    if a cascata:<br>
+    <code class = esercizio>if (x >= 37) {<br>
+    messaggio = x + " è pari";<br>
+    } else if (x%2 == 0) {
+    messaggio = x + " è dispari";<br>
+    } else {<br>
+    messaggio = x + " è qualcosa";<br><br>
+    console.log(messaggio1)<br><br>
+    console.log(messaggio2)<br><br>
+            
+    console.log(messaggio3)<br><br> 
+    }</code>
+</div> 
+</body>
+<script src="script.js"></script>
+</html>
