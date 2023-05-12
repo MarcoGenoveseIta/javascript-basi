@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    display: grid;
+    place-content: center;
+}
+
+.king{
+    padding-top: 50%;
+    color: red;    
+}
