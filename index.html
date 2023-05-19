@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./appunti.ico">
+    <link rel="icon" href="./js.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <title>Appunti</title>
 </head>
 <body>
     <div class="contenitore-primario">
         <div class="dati-base">
             <a href="http://127.0.0.1:5500/index2.html" class="nome">Marco</a>
-            <div>12/05/2023</div>
+            <div class="titos">JavaScript Basi</div>
+            <div class="data">05/2023</div>
         </div>
         <div class="testos">
         
             <p class = "titolo">STRINGHE, NUMERi E ALTRI TIPI DI DATI IN JAVASCRIPT</p>
 
             in javascript ci sono 5 tipi di dati primitivi:<br>
-            numeri, stringhe, boleani,null e undefinde e gli oggetti.<br>
+            numeri, stringhe, boleani, null e undefinde e gli oggetti.<br>
             javascript converte un primitivo nel corrispondente oggetto<br>
         
             <p class = esempio>esempio:</p>
@@ -32,7 +36,7 @@
             a partire dal tipo primitivo stringa, javascript crea il corrispondente oggetto string,<br> 
             invoca il metodo toUppercase() per ottenere la versione stringa.<br>
             contribuisce a creare non poca confisione nella distinzione tra dati primititvi e oggetti, <br> 
-            non sonopochi a semplificare sostenendo che in realtà in javascript tuutp è oggetto.
+            non sono pochi a semplificare sostenendo che in realtà in javascript tutto è oggetto.
             
             <p class = "titolo">STRINGHE IN JAVASCRIPT</p>
             
@@ -66,9 +70,10 @@
             -infinity (infinito negativo)</code></div><br>
             
             ogni valore che ha un precisione maggiore di quella rappresentabile viene considerata unguale a zero.<br>
-            un altro valore numerico è NaN (not a number) che indica un valore numerico non defito.
+            un altro valore numerico è NaN (not a number) che indica un valore numerico non definito.
             
             <p class = "titolo">I TIPI DI DATO NULL, UNDEFINED E BOOLEANO</p>
+
             javascript prevete 2 tipi di dato speciali per rappresentare valori nulli e non definiti.<br>
             il tipo dato null prevede  il solo valore null, che rapresenta un valore che non rientra tra i tipi di dato <br>
             del linguaggi.
@@ -412,7 +417,7 @@
         
             <div class="es"><code class = esercizio>console.log(messaggio1)<br>
             console.log(messaggio2)<br>
-            console.log(messaggio3)<br></code></div><br>
+            console.log(messaggio3)<br></code></div>
             
             <p class="titolo">WHILE E DO-WHILE, LE INTERAZIONE BASE</p>
             
@@ -429,7 +434,7 @@
         
             <p class="esempio">esempio:</p>
 
-            <div class="esercizio">var y = 1;<br>
+            <div class="es"><code class = esercizio>var y = 1;<br>
             ver i = 1;<br>
             while (i <= 4) {<br>
             y = y * i; <br>
@@ -451,8 +456,196 @@
             while (condizione)</code></div> <br> 
         
             Questo garantisce che il blocco di codice verrà eseguito almeno una volta
+
+            <p class="titolo">ARRAY IN JAVACSRIPT</p>
+
+            gli array sono lo stile numerate in oggetti anche di tipo diverso <br>
+            consentono di associare più valori ad un unico variabile. <br>
+            l'uso di array evita di definire più variabili e semplifica  lo svolgimento di operazioni <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var giorniDellaSettimana = [ <br>
+                "lunedì", <br>
+                "martedì", <br>
+                "mercoledì", <br>
+                "giovedì", <br>
+                "venerdì", <br>
+                "sabato", <br>
+                "domenica"];</code></div> <br>
+
+            questo è un modo di definire un array basato sulla rappresentazione letterale <br>
+            dopo aver definito un arrat possiamo accedere ai singoli elementi <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var primoGiorno = giorniDellaSettimana[0];</code></div><br>
+
+            si può fare anche con più elementi
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var terzoGiorno = giorniDellaSettimana[2]; <br>
+                var settimoGiorno = giorniDellaSettimana[6];</code></div>
+
+            <p class="titolo">DEFINIRE UN ARRAY</p>
+
+            un array può essere vuoto, cioè senza elementi, ed rappresentato dalle sole quadre ([]) <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var myArray = [,"elemento"];</code></div> <br>
+
+            otterremo un array con due elementi di cui il primo e un undegìfined. <br> 
+            se invece l' elemento finale non è indicato:
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var myArray = ["elemento", "altroelemento",];</code></div> <br>
+
+            javascript ignorerà l'ultima virgola generando un array di due soli elementi <br>
+            gli elementi di un array possono essere di qualsiasi tipo di dato previsto da javascript <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var myArray = [123, "stringa", true, null];</code></div> <br>
+
+            ci possono essere array dentro array
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var myArray = [123, "stringa", ["a", "b", 99]];</code></div> <br>
+
+            un questo caso epr accedera a 99 dovremmo accedere prima al terzo alemento principale <br>
+            poi al terzo elemento dell' array contenuto un esso: <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var novantanove = myArray[2][2];</code></div> 
+            
+            <p class="titolo">ARRAY MULTIDIMENSIONALI</p>
+
+            la presenza di array come elementi di altri array ci consente di definire <br> 
+            array multidimensionali o matrici.
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var matrice = [[24, 13, 1], [48, 92, 17], [8, 56, 11]]</code></div> <br>
+
+            per accedere al num 48 indicheremo le sue coordinate:
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var quarantotto = matrice[1][0];</code></div>
+
+            <p class="titolo">DESTRUTTURAZIONE DELL' ASSEGNAMENTO</p>
+
+            sfruttanto un meccanismo chiamato destrutturazione dell' assegnamento possiammo riscrivere <br> 
+            assegnamenti:
+            
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var [primoGiorno,,terzoGiorno,,,,settimoGiorno] = giorniDellaSettimana;</code> </div> 
+
+            <p class="titolo">I CICLI FOR</p>
+
+            un alternativa al while è l'istruzione for <br>
+            generalmente intesa come un blocco di codice numero determinato più volte <br>
+            
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>for (inizializzazione; condizione; modifica) { <br>
+                // istruzioni <br>
+            }</code></div> <br>
+
+            - javascript esegue l' istruzione specificata in inizializzazione prima di avviare ciclo <br> <br>
+
+            - l' espressione booleana che viene valutata prima di eseguire ciascuna iterazione <br> <br>
+
+            - al termine di ciascuna iterazione viene eseguita l'istruzione modifica <br> <br>
+
+            in questo caso è responsabilità nostra <br>
+            
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var y = 1; <br>
+                var i; <br>
+                for (i = 1; i <=4; i++) { <br>
+                    y = y * i; <br>
+                }</code></div> <br>
+
+            abbiamotrasposto gli elementi del while all' interno dello schema sintattico del for <br>
+            il for è generalmente comodo per effettuare operazioni sugli array, ciclando tra gli elementi <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var quantita = [12, 34, 45, 7, 19]; <br>
+                var totale = 0; <br>
+                var i; <br>
+                for (i = 0; i < 5; i++) { <br>
+                    totale = totale + quantita[i]; <br>
+                }</code></div>
+
+            <p class="titolo">INIZIALLIZZAZIONI MULTIPLE O VUOTE</p>
+
+            l' istruzione for è molto flessibile infatti possiamo <br> 
+            inserire nelle sezioni inizializzazione e modifica anche gruppi di istruzioni separati da virgole <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var y; <br>
+                var i; <br>
+                for (i = 1, y = 1; i <=4; i++) { <br>
+                    y = y * i; <br>
+                }</code></div> <br>
+
+            Possiamo ad esempio, scrivere il nostro ciclo in questo modo del tutto equivalente <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var y = 1; <br>
+                var i = 1; <br>
+                for (; i <=4; i++) { <br>
+                    y = y * i; <br>
+                }</code></div> <br>
+            
+            fino ad arrivare ad una situazione del genere sintatticamente quasi identica <br>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var y = 1; <br>
+                var i = 1; <br>
+                for (; i <=4;) { <br>
+                    y = y * i; <br>
+                    i++; <br>
+                }</code></div> 
+
+            <p class="titolo">FOR-IN E FOR-OF</p>
+
+            Per lavorare più comodamente con gli array JavaScript prevede due varianti <br> 
+            del for: il for...in e il for...of. Vediamo come come scrivere le istruzioni precedenti <br> 
+            facendo uso del for...in
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var quantita = [12, 34, 45, 7, 19]; <br>
+                var totale = 0; <br>
+                var indice; <br>
+                for (indice in quantita) { <br>
+                    totale = totale +  quantita[indice]; <br>
+                }</code></div> <br>
+
+            fruttando questa variante del for non abbiamo bisogno di specificare la lunghezza <br> 
+            dell'array nè l'istruzione di modifica della condizione  <br> <br>
+
+            ad ogni iterazione javascript assegna alla variabile valore il contenuto di ciascun elemeto array <br>
+            Queste varianti del for ci consentono di scrivere meno codice quando lavoriamo con gli array <br>
+
+            
+
         </div> 
     </div>
 </body>
 <script src="script.js"></script>
+<script src="script2.js"></script>
 </html>

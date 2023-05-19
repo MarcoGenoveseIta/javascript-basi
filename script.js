@@ -325,3 +325,23 @@ switch (10) {
 
 console.log(giudizio)
 
+var y = 1;
+var i = 1;
+while (i <= 4) {
+	y = y * i;
+	i++;
+	console.log("y: "+y)
+	console.log("i: "+i)
+}
+
+const parola = "test"
+const nVolte = 50
+let contatore = 0
+while (contatore < nVolte) {
+	// parola = parola * contatore;
+	console.log(parola)
+	contatore++;
+	// console.log("nVolte: "+nVolte)
+	// console.log("parola: "+parola)
+	// console.log("contatore: "+contatore)
+}
