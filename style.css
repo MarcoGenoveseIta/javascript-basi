@@ -48,7 +48,7 @@ html, body {
 }
 
 .esempio{
-color: rgb(1, 172, 251)
+    color: rgb(1, 172, 251)
 }
 
 .titolo{
@@ -66,13 +66,15 @@ color: rgb(1, 172, 251)
 }
 
 .es{
-    padding: 1px;
+    padding: 5px;
+    padding-left: 25px;
     background-color: rgb(33, 33, 33);
     border-radius: 8px;
 }
 
 .ess{
-    padding: 1px;
+    padding: 5px;
+    padding-left: 25px;
     background-color: rgb(33, 33, 33);
     border-radius: 8px;
     height: 400px;

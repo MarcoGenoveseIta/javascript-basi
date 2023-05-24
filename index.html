@@ -25,7 +25,7 @@
 
             in javascript ci sono 5 tipi di dati primitivi:<br>
             numeri, stringhe, boleani, null e undefinde e gli oggetti.<br>
-            javascript converte un primitivo nel corrispondente oggetto<br>
+            javascript converte un primitivo nel corrispondente oggetto
         
             <p class = esempio>esempio:</p>
         
@@ -118,12 +118,12 @@
             nel caso si tratta di un espressione che combina una variabile x ed il valore numerico 1 tramite <br>
             l'operatore + (più) per ottenere l'incremento di un unità del valore x. <br>
             è evidente che un ruolo fondamentale nelle espressioni è assunto dagli operatori in base al numero di <br>
-            valori che possono combinare uno, due o tre valori.<br>
+            valori che possono combinare uno, due o tre valori.
             
             <p class = "titolo">OPERATORI ARITMETICI</p>
             
             per quel che riguarda il tipo di dato numerico, abbiamo gli operatori aritmetici, che consentono la <br>
-            combinazione di valori numerici.<br>
+            combinazione di valori numerici.
             
             <p class = esempio>esempio:</p>
             
@@ -137,6 +137,7 @@
                     <tr><td class="dato">%<td class="dato">modulo o resto</td></td>
                 </table>
             </code></div>
+
             <p class = esempio>esempio:</p>
         
             <div class="es"><code class = esercizio>9/4<br>9%4 + 5 + 10</code></div> <br>
@@ -187,7 +188,7 @@
                 </table>     
             </code>   </div><br> 
             le espressioni che utilizzano gli operatori relazionari restuituiscono ub valore booleano in base <br> 
-            all' esito del confronto. <br>
+            all' esito del confronto.
         
             <p class = esempio>esempio:</p>
         
@@ -257,6 +258,7 @@
             </code></div><br>
         
             l' uso di queste espressioni rende più compatibile il codice ma non sempre altrttanto leggibile.
+
             <p class = "titolo">OPERATORI SU STRINGHE</p>
         
             l' unico operatore su stringhe specifico è operatore concatenazione. esso consente di creare una nuova <br>
@@ -279,11 +281,11 @@
             console.log({strumento})</code></div><br>
             
             il suo utilizzo è abbastanza immediato, ma con le variabili si possono ottenere risultati non <br>
-            prebisti dal momento che il simbolo utilizato è lo stesso dell' addizione. <br>
+            prebisti dal momento che il simbolo utilizato è lo stesso dell' addizione.
             
             <p class = esempio>esempio:</p>
             
-            <div class="es"><code class = esercizio>x + y</code></div><br>
+            <div class="es"><code class = esercizio>x + y</code></div>
             
             <p class = "titolo">CONVERSIONI TRA TIPI DI VARIABILI</p>
             
@@ -296,7 +298,7 @@
             var calcolo =  x * y;<br><br>
             console.log({calcolo})</code></div><br>
             
-            conversione implicita delle variabili in booleano<br>
+            conversione implicita delle variabili in booleano
             
             <p class = esempio>esempio:</p>
             
@@ -641,6 +643,272 @@
 
             ad ogni iterazione javascript assegna alla variabile valore il contenuto di ciascun elemeto array <br>
             Queste varianti del for ci consentono di scrivere meno codice quando lavoriamo con gli array <br>
+
+            <p class="titolo">DEFINIRE UNA FUNZIONE JAVACSRIPT</p>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>function nome(argomenti) { <br>
+                // istruzioni <br>
+                }</code></div> <br>
+
+            La parola chiave function evidenzia che stiamo dichiarando una funzione il cui nome segue le stesse <br> 
+            regole dei nomi di variabili. <br>
+            Una volta dichiarata, una funzione non viene eseguita subito. Stiamo semplicemente dicendo all'engine <br> 
+            JavaScript che al blocco di codice indicato viene assegnato un nome 
+
+            <p class="titolo">JS: INVOCARE UNA FUNZIOEN</p>
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>nome(valori);</code></div> <br>
+
+            dove nome è il nome della funzione e valori è una lista opzionale di espressioni separata da virgole. <br>
+
+            <p class="titolo">L' ISTRUZZIONE RETURN</p>
+
+            Nel corpo della funzione può essere presente l'istruzione return che consente di terminare e restituire un valore <br> 
+            al codice che l'ha chiamata
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>function somma() { <br>
+                var z = 11 + 5;  <br>
+                return z; <br>
+                } <br>
+                var risultato = somma();</code></div> <br>
+
+            In questo esempio abbiamo definito una funzione senza argomenti che somma due interi e restituisce il risultato
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var risultato = 5 + somma() * 2;</code></div> <br>
+
+            In questo esempio l'invocazione somma() sarà equivalente al valore 16, per cui la variabile risultato avrà valore 37
+
+            <p class="ARGOMENTI O PARAMETRI DI UNA FUNZIONE"></p>
+
+            La funzione somma() che abbiamo definito prima è in grado di sommare soltanto i due numeri fissati nel <br> 
+            blocco di istruzioni
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>function somma(x, y) { <br>
+                var z = x + y; <br>
+                return z; <br>
+                }</code></div> <br>
+
+            In questo caso i valori da sommare verranno passati alla funzione somma() al momento dell'invocazione:
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var risultato = somma(11, 5);</code></div>
+
+            <p class="titolo">PARAMETRI OPZIONALI</p>
+
+            Come abbiamo avuto modo di vedere, JavaScript è un linguaggio molto flessibile e questa sua <br> 
+            flessibilità ci consente di fare delle cose che talvolta possono apparire abbastanza strane <br> <br>
+
+            In altre parole, data la definizione della funzione somma() con i due argomenti da sommare, <br> 
+            possiamo invocare la funzione nei seguenti modi
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var risultato1 = somma(11); <br>
+                var risultato2 = somma(); <br>
+                var risultato3 = somma(11, 5, 7, 9);</code></div> <br>
+            
+            Queste tre invocazioni della funzione somma() potrebbero apparire errate, <br> 
+            ma non generano nessun errore in JavaScript  
+
+            <p class="titolo">L' ARRAY ARGUMENTS</p>
+
+            Una analoga flessibilità l'abbiamo anche nella dichiarazione degli argomenti quando definiamo <br> 
+            una funzione. Ad esempio, possiamo non definire alcun argomento nella definizione di somma() <br> 
+            ed accedere ai valori passati in fase di chiamata tramite un array speciale predefinito: arguments.
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>function somma() { <br>
+                var z = arguments[0] + arguments[1]; <br>
+                return z; <br>
+                }</code></div> <br>
+
+            In questo caso non specifichiamo gli argomenti a fianco al nome della funzione, ma accediamo ad <br> 
+            essi sfruttando questo array predefinito. <br> <br>
+
+            possiamo sommare un numero indefinito di valori:
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>function somma() { <br>
+                var z = 0; <br>
+                var i; <br>
+                for (i in arguments) { <br>
+                z = z + arguments[i]; <br>
+                } <br>
+                return z; <br>
+                }</code></div> <br>
+
+            In questo modo potremo chiamare la funzione per sommare un qualsiasi numero di valori:
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>somma(2, 78); <br>
+            somma(17, 32, 4, 19, 52);</code> </div>
+            
+            <p class="titolo">ARGOMENTI CON VALORI DI DEFAULT</p>
+
+            arricchiscono la flessibilità della gestione degli argomenti di una funzione. <br> 
+            In particolare viene introdotta la possibilità di specificare dei valori di default:
+
+            <div class="es"><code class = esercizio>function somma(x = 0, y = 0) { <br>
+                var z = x + y; <br>
+                return z; <br>
+                }</code></div> <br>
+            
+            In questo modo se al momento della chiamata non viene passato un argomento, <br> 
+            ad esso viene assegnato il valore di default specificato, invece del valore undefined.
+
+            <p class="JAVACSRIPT: REST PARAMETER, ARGOMENTI AGGIUNTIVI"></p>
+
+            Supponiamo di voler definire una funzione che implementa diverse operazioni <br> 
+            aritmetiche e prende come primo argomento il nome dell'operazione da eseguire <br> 
+            ed a seguire un numero variabile di valori su cui effettuare l'operazione.
+
+            <p class="esempio">esempio:</p>
+
+            <div class="ess"><code class = esercizio>function eseguiOperazione(x, ...y) { <br>
+                var z = 0; <br>
+                switch (x) { <br>
+                case "somma": <br>
+                for (i in y) { <br>
+                z = z + y[i]; <br>
+                } <br>
+                break; <br>
+                case "moltiplica": <br>
+                for (i in y) { <br>
+                z = z * y[i]; <br>
+                } <br>
+                break; <br>
+                case "dividi": <br>
+                z = y[0]/y[1]; <br>
+                break; <br>
+                default: <br>
+                z = NaN; <br>
+                break; <br>
+                } <br>
+                return z; <br>
+                }</code></div> <br>
+            
+            Come possiamo vedere, abbiamo specificato un argomento x che rappresenta il <br> 
+            nome dell'operazione da eseguire e un argomento y preceduto da tre punti che <br> 
+            rappresenta il resto dei valori da passare alla funzione <br> <br>
+
+            La notazione dell'argomento preceduto dai puntini cattura l'elenco degli <br> 
+            argomenti successivi al primo e lo rende disponibile all'interno della funzione <br> 
+            sotto forma di array <br> <br>
+
+            L'approccio è simile all'array predefinito arguments, ma mentre questo <br>
+            cattura tutti gli argomenti della funzione, il rest parameter cattura soltanto <br> 
+            gli argomenti in più rispetto a quelli specificati singolarmente
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>eseguiOperazione("somma", 12, 54, 2, 7, 12); <br>
+                eseguiOperazione("moltiplica", 4, 11, 32); <br>
+                eseguiOperazione("dividi", 45, 9, 6, 17);</code></div> <br>
+
+            La prima e la seconda chiamata otterranno rispettivamente la somma ed il prodotto dei valori <br> 
+            passati dal secondo argomento in poi, mentre la terza chiamata otterrà la divisione del <br> 
+            secondo e terzo argomento, ignorando gli altri <br> <br>
+
+            La stessa notazione del rest parameter può essere utilizzata nelle <br> 
+            chiamate a funzioni che prevedono diversi argomenti
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var addendi = [8, 23, 19, 72, 3, 39]; <br>
+                somma(...addendi);</code></div> <br>
+
+            La chiamata con lo spread operator è equivalente alla seguente chiamata: 
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>somma(8, 23, 19, 72, 3, 39);</code></div>
+
+            <p class="titolo">RESTITUZIONE DI VALORI</p>
+
+            Abbiamo visto come una funzione possa restituire un valore al codice chiamante <br> 
+            tramite l'istruzione return. <br> <br>
+
+            Se una funzione non ha un valore da restituire, infatti, può omettere il return <br> 
+            o presentare l'istruzione senza un valore esplicito
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>function msg(messaggio) { <br>
+                alert(messaggio); <br>
+                }</code></div> <br>
+            
+            <div class="es"><code class = esercizio>function msg(messaggio) { <br>
+                alert(messaggio); <br>
+                return; <br>
+                }</code></div> <br>
+
+            Se proviamo ad assegnare ad una variabile il valore restituito in entrambi <br> 
+            i casi otterremo il valore undefined <br> <br>
+
+            L'effetto dell'esecuzione di return è la terminazione della funzione e la restituzione di un valore
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>function decodifica(numero) { <br>
+                switch(numero) { <br>
+                case "uno": <br>
+                return 1; <br>
+                break; <br>
+                case "due": <br>
+                return 2; <br>
+                break; <br>
+                case "tre": <br>
+                return 3; <br>
+                break; <br>
+                default: <br>
+                return NaN; <br>
+                break; <br>
+                } <br>
+                }</code></div> <br>
+
+            In questo esempio, la funzione termina e restituisce un valore non appena individua <br> 
+            una corrispondenza con l'argomento, quindi le istruzioni break sarebbero superflue nel caso specifico <br> <br>
+
+            Tuttavia è buona norma limitare il numero di return presenti in una funzione, riducendoli possibilmente a <br> 
+            uno soltanto
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>function decodifica(numero) { <br>
+                var risultato; <br>
+                switch(numero) { <br>
+                case "uno": <br>
+                risultato = 1; <br>
+                break; <br> 
+                case "due": <br>
+                risultato = 2; <br>
+                break; <br>
+                case "tre": <br>
+                risultato = 3; <br>
+                break; <br>
+                default: <br>
+                risultato = NaN; <br>
+                break; <br>
+                } <br>
+                return risultato; <br>
+                }</code></div>
+            
+            
+
         </div> 
     </div>
 </body>
