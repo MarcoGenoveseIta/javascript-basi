@@ -35,6 +35,7 @@ html, body {
 }
 
 .dati-base{
+    padding-right: 15;
     padding-left:15px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -86,4 +87,9 @@ color: rgb(1, 172, 251)
 .titos{
     color: rgb(170, 170, 170);
     font-family: 'Audiowide', cursive;
+}
+
+.data{
+    color: rgb(170, 168, 168);
+    text-decoration: none;
 }
