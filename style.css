@@ -3,7 +3,7 @@
 }
 
 html, body{
-    color: rgb(249, 247, 247);
+    color: rgb(225, 225, 225);
     background-color: rgba(3, 3, 3, 0.907);
     height: 100%;
     margin: 0px;
@@ -24,7 +24,7 @@ html, body{
     padding-bottom: 15px;
     font-size:large;
     font-family:'Wix Madefor Text', sans-serif;
-    color: rgb(225, 225, 225);
+    color: rgb(215, 215, 215);
     background-color: rgb(39, 39, 39);
     overflow: auto;
     -webkit-box-shadow: 0px 50px 200px 50px #6b6b6b; 
@@ -62,6 +62,7 @@ html, body{
 }
 
 .es{
+    cursor: crosshair;
     padding: 20px;
     margin-right: 20px;
     background-color: rgb(49, 49, 49);
@@ -69,6 +70,7 @@ html, body{
 }
 
 .ess{
+    cursor: crosshair;
     padding: 20px;
     margin-right: 20px;
 
@@ -79,19 +81,21 @@ html, body{
 }
 
 .nome{
+    cursor: help;
     color: rgb(223, 223, 223);
     text-decoration: none;
 }
 
 .titos{
+    text-decoration: none;
+    cursor: help;
     color: rgb(223, 223, 223);
     font-family: 'Audiowide', cursive;
+    padding-left: 260px;
 }
 
 .data{
+    cursor: help;
     color: rgb(223, 223, 223);
     text-decoration: none;
 }
-
-
-
