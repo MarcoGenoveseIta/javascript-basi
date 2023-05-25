@@ -38,8 +38,8 @@ html, body{
     padding-right: 15px;
     background-color: rgb(0, 0, 0);
     color: rgb(23, 23, 23);
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-between;
 }
 
 .esempio{
@@ -87,11 +87,12 @@ html, body{
 }
 
 .titos{
+    place-content: center;
     text-decoration: none;
     cursor: help;
     color: rgb(223, 223, 223);
     font-family: 'Audiowide', cursive;
-    padding-left: 260px;
+    margin-left: 250px;
 }
 
 .data{
