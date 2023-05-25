@@ -9,17 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <title>Appunti</title>
+    <title>JavaScript Base</title>
 </head>
 <body>
     <div class="contenitore-primario">
         <div class="dati-base">
-            <a href="http://127.0.0.1:5500/index2.html" class="nome">Marco</a>
+            <a href="https://github.com/MarcoGenoveseIta/javascript-basi" class="nome">Marco</a>
             <div class="titos">JavaScript Basi</div>
             <a href="https://www.google.com/search?q=maggio+2023&client=firefox-b-d&sxsrf=APwXEdf1y5AHnAkXH05frZdY1iQhqYUOsA%3A1684825452385&ei=bGVsZImPF_T97_UP7PWJmAQ&ved=0ahUKEwiJ9eP074r_AhX0_rsIHex6AkMQ4dUDCA4&uact=5&oq=maggio+2023&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMggIABCABBCxAzIFCAAQgAQyCwgAEIAEELEDEIMBMgsIABCABBCxAxCDATIFCAAQgAQyBQgAEIAEMgsIABCKBRCxAxCDATIFCAAQgAQ6CggAEEcQ1gQQsAM6AggmOggIABAWEB4QDzoICAAQFhAeEAo6BggAEBYQHkoECEEYAFCuBFjFDmCFEGgBcAF4AIABaYgB9AKSAQMzLjGYAQCgAQHIAQTAAQE&sclient=gws-wiz-serp" class="data">05/2023</a>
-            </div>
+        </div>
             
-            <div class="testos">
+        <div class="testos">
         
             <p class = "titolo">STRINGHE, NUMERi E ALTRI TIPI DI DATI IN JAVASCRIPT</p>
 
@@ -907,11 +907,264 @@
                 return risultato; <br>
                 }</code></div>
             
+            <p class="titolo">VARIABILI GLOBALI E LOCALI: LO SCOPE</p>
+
+            Queste variabili sono accessibili soltanto all'interno della <br> 
+            funzione e non vengono viste fuori di essa o, in termini tecnici, hanno uno scope locale <br> <br>
+
+            Lo scope o ambito di visibilità di una variabile è la parte di uno script all'interno <br> 
+            del quale si può fare riferimento ad essa <br>
+            Le variabili dichiarate all'interno di una funzione sono dette locali alla funzione dal momento <br> 
+            che sono accessibili soltanto all'interno del suo corpo. <br> <br>
+
+            Le variabili dichiarate fuori da qualsiasi funzione sono dette globali e sono accessibili <br> 
+            da qualsiasi punto dello script, anche all'interno di funzioni
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = esercizio>var x = 10; <br>
+                var y; <br>
+                function incrementa(){ <br>
+                        var z = 5; <br>
+                    x = x + z; <br>
+                } <br>
+                incrementa(); <br>
+                y = x + 1;</code></div> <br>
+
+            Nell'esempio abbiamo dichiarato due variabili globali x e y. Entrambe sono accessibili anche <br> 
+            all'interno della funzione incrementa() e infatti la funzione accede a x per incrementarla del <br> 
+            valore della variabile locale z. <br> <br>
+
+            Il valore della variabile x dopo l'invocazione della funzione incrementa() sarà <br> 
+            pertanto 15 ed il valore finale assegnato a y sarà 16. <br> <br>
+
+            Variabili locali e globali possono avere lo stesso nome, ma in questo caso si vengono a creare <br> 
+            delle ambiguità la cui risoluzione dipende dalla regola secondo cui si fa riferimento <br> 
+            all'ambito di visibilità più vicino all'utilizzo della variabile
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class = "esercizio">var x = 10; <br>
+                var y; <br>
+                function incrementa() { <br>
+                    var x = 5; <br>
+                    x = x + 1; <br>
+                    return x; <br>
+                } <br>
+                incrementa(); <br>
+                y = x + 1;</code></div> <br>
             
+            all'interno del corpo della funzione incrementa() viene dichiarata una variabile <br> 
+            locale con lo stesso nome della variabile globale x. In questo caso il riferimento a x all'interno <br> 
+            della funzione è inteso come il riferimento alla variabile locale, in quanto lo scope locale è il <br> 
+            più vicino all'uso della variabile <br> <br>
+
+            indipendentemente dal punto in cui viene dichiarata una variabile, essa <br> 
+            esiste in tutto lo scope a cui appartiene
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class ="esercizio"> var x = 10; <br>
+                var y; <br>
+                function incrementa() { <br>
+                    var s = x; // x ha valore undefined <br>
+                    var x = 5; // x ha valore 5 <br>
+                    x = x + s; // x ha valore NaN <br>
+                    return x; <br>
+                } <br>
+                incrementa(); <br>
+                y = x + 1;     // x ha valore 10</code></div> <br>
+
+            All'interno della funzione incrementa() abbiamo utilizzato la variabile x prima della sua dichiarazione <br>
+            x non fa riferimento alla variabile globale, ma a quella locale dichiarata subito dopo e il suo valore <br> 
+            è ancora undefined <br> <br>
+
+            In altre parole, nel seguente esempio la variabile y è accessibile anche al di fuori del blocco <br> 
+            associato all'istruzione if
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class ="esercizio">function rendiPari(x) { <br>
+                if (x%2 != 0) { <br>
+                    var y; <br>
+                    y= x + 1; <br>
+                } else { <br>
+                    y = x; <br>
+                } <br>
+                return y; <br>
+            }</code></div> <br>
+
+            è opportuno dichiarare le variabili all'inizio del proprio scope, ad esempio all'inizio del corpo <br> 
+            di una funzione, in modo evidenziare quali variabili saranno disponibili
+            
+            <p class="titolo">LET</p>
+
+            Se invece abbiamo bisogno di creare uno scope specifico per una o più variabili possiamo <br> 
+            ricorrere all'istruzione let  
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class ="esercizio">var x = 10; <br>
+                var y; <br>
+                { <br>
+                  let x = 20; <br>
+                  y = x + 1; <br>
+                } <br>
+                y = x + y;</code></div> <br>
+
+            avremo uno scope a livello di blocco di codice in cui la variabile x dichiarata tramite let <br> 
+            nasconde quella esterna dichiarata con var <br> <br>
+
+            Un ambito in cui è senz'altro utile utilizzare l'istruzione let è nelle iterazioni, come <br> 
+            ad esempio nel for
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class ="esercizio">var x = 0; <br>
+                for (let i = 0; i < 10; i++) { <br>
+                    x = x + 1; <br>
+                }</code></div> <br>
+
+            Grazie a let dichiariamo ed utilizziamo la variabile i soltanto all'interno del for, evitando <br> 
+            eventuali collisioni con altre variabili omonime definite in scope più esterni <br> <br>
+            
+            Come possiamo intuire, la distinzione tra scope globale e locale delle variabili è in realtà <br> 
+            troppo semplicistica
+
+            <p class="titol">FUNZIONI PREDEFINITE</p>
+
+            JavaScript dispone di alcune funzioni predefinite che risultano utili in alcune attività. <br> 
+            Esse possono essere invocate in qualsiasi punto di uno script senza particolari distinzioni <br> 
+            dalla chiamata di una funzione definita da noi
+
+            <p class="titolo">PARSEINT E PARSEFLOAT</p>
+
+            Abbiamo già avuto modo di vedere le funzioni parseInt() e parseFloat() per convertire <br> 
+            una stringa rispettivamente in un valone numerico intero e decimale <br> <br>
+
+            la funzione parseInt() prevede due parametri: il primo è la stringa da convertire, <br> 
+            mentre il secondo è opzionale e indica la base del sistema di rappresentazione numerica utilizzato <br> <br>
+        
+            La funzione parseFloat() invece prevede un solo argomento e restituisce un valore numerico intero o <br> 
+            decimale in base alla presenza del separatore decimale
+
+            <p class="titolo">ISNAN E IS FINITE</p>
+
+            Rimanendo sempre nell'ambito dei numeri abbiamo le funzioni isNaN() e isFinite() <br> <br>
+
+            La funzione isNaN() prende un argomento e restituisce true se il suo valore è NaN, cioè non <br> 
+            è un valore numerico valido, false altrimenti <br> <br>
+
+            Analogamente, isFinite() restituisce true se il valore del suo argomento è diverso da Infinity e da NaN
+
+            <p class="titolo">ESCAPE E UNESCAPE</p>
+
+            Date le sue origini strettamemte legate al Web, JavaScript mette a disposizione una serie <br> 
+            di funzioni predefinite per la codifica e decodifica di stringhe destinate a viaggiare sulla rete <br> <br>
+
+            In particolare la funzione escape() restituisce la codifica una stringa lasciando inalterate <br> 
+            cifre, lettere e i caratteri +-*/._@ e rimpiazzando tutti gli altri caratteri con la codifica <br> 
+            esadecimale preceduta da un carattere percentuale (%). Il seguente è un esempio di uso della funzione <br> 
+            escape()
+
+            <p class="esempio">esempio:</p>
+            
+            <div class="es"><code class ="esercizio">var stringa = escape("Questa è una stringa!");</code></div> <br>
+
+            La variabile stringa conterrà il valore Questa%20%E8%20una%20stringa%21 dove al posto degli <br> 
+            spazi, della e accentata e del punto esclamativo è stata sostituita la corrispondente codifica <br> 
+            esadecimale <br> <br>
+
+            La funzione unescape() esegue il procedimento contrario convertendo le codifiche esadecimali <br> 
+            nei corrispondenti caratteri ASCII
+
+            <p class="titolo">FUNZIONI DEPRECATE</p>
+
+            Le funzioni escape() e unescape() sono considerate obsolete sin dalla versione 3 dello standard <br> 
+            ECMAScript. Esse vengono migliorate e sostituite dalle funzioni di codifica e decodifica degli URI, <br> 
+            che stiamo per vedere, tuttavia sono ancora supportate dalla maggior parte degli engine JavaScript per <br> 
+            questioni di compatibilità. In definitiva è meglio evitare di utilizzarle e preferire le funzioni come <br> 
+            encodeURI che stiamo per esaminare.
+
+            <p class="titlo">ENCODEURI E DECIDEURI</p>
+
+            Quando una stringa rappresenta un URI non è opportuno utilizzare la funzione escape() per la <br> 
+            codifica, in quanto verrebbero codificati alcuni caratteri speciali, come ad esempio ? e #, che <br> 
+            hanno un significato speciale <br> <br>
+
+            In presenza di un URI utilizziamo la funzione encodeURI() che esclude dalla codifica i <br> 
+            caratteri , /?:@&=+$#
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class ="esercizio">var escapedURI = escape("https://www.html.it/a b.html"); <br>
+                var encodedURI = encodeURI("https://www.html.it/a b.html");</code></div> <br>
+            
+            la variabile escapedURI avrà il valore http%3A//www.html.it/a%20b.html mentre encodedURI conterrà <br> 
+            il valore https://www.html.it/a%20b.html. <br> <br>
+
+            La controparte di encodeURI() è la funzione decodeURI() che, come è intuibile, restituisce la <br> 
+            stringa decodificata
+
+            <p class="titolo">ENCODEURI E DECIDEURI</p>
+
+            La funzione encodeURIComponent() codifica anche i caratteri speciali esclusi dalla encodeURI(). <br> 
+            Essa è pensata per codificare i valori di eventuali parametri passati in un URI
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class ="esercizio">var param = encodeURIComponent("Che cos'è?"); <br>
+                var encodedURI = encodeURI("https://www.html.it/a b.php?x=") + param;</code></div>
+
+            <p class="esempio">Il valore finale della variabile encodedURI sarà:</p>
+
+            <div class="es"><code class ="esercizio">https://www.html.it/a%20b.php?x=Che%20cos'%C3%A8%3F</code></div> <br>
+
+            il valore originario codificato da encodeURIComponent() conteneva il simbolo del punto <br> 
+            interrogativo (?) che se non codificato avrebbe generato un URI malformato <br> <br>
+
+            Come è presumibile, la corrispondente funzione per la decodifica è decodeURIComponent()
+
+            <p class="titolo">EVAL</p>
+
+            Tra le funzioni predefinite, eval() ha un ruolo controverso. <br> 
+            Essa prende come argomento una stringa e la valuta o la esegue come se fosse codice JavaScript. <br>
+            La stringa può rappresentare un'espressione o una serie di istruzioni
+
+            <p class="esempio">esempio:</p>
+
+            <div class="es"><code class ="esercizio">var x = eval("5 + 1"); <br>
+                var z = eval("x + 1"); <br>
+                eval("var a = 4; a = a *3;"); <br>
+                a = a + 1;</code></div> <br>
+
+            La prima istruzione valuta un'espressione numerica e la assegna alla variabile x, <br> 
+            che assume quindi il valore di 6. <br> 
+            La seconda istruzione valuta una stringa che contiene la variabile x incrementandone il <br> 
+            valore di uno. <br> La variabile z avrà il valore di 7. <br> 
+            Questo ci fa capire che lo scope di riferimento di eval() è lo scope corrente. <br> <br>
+
+            Infine l'ultima invocazione di eval() esegue due istruzioni JavaScript creando <br> 
+            nello scope corrente la variabile a il cui valore finale sarà 13. <br> <br>
+
+            Le potenzialità di eval() sono enormi, dal momento che mette a disposizione del <br> 
+            programmatore un vero e proprio interprete JavaScript. <br>
+            Insieme alle potenzialità anche il pericolo di avere risultati inattesi e non <br> 
+            facilmente controllabili è alto, tanto che è stato detto che eval is evil. <br> <br>
+
+            Diciamo che in linea di massima è opportuno evitare di utilizzare questa <br> 
+            funzione perchè può creare più problemi di quelli che vorrebbe risolvere
+
+            <p class="titolo">I NOMI DI FUNZIONI</p>
+
+            A differenza delle parole chiavi di JavaScript, come i nomi delle istruzioni ed <br> 
+            altri nomi riservati, i nomi delle funzioni predefinite non sono riservati. <br>
+            Questo vuol dire che se tentiamo di definire una nostra funzione eval() o parseInt() <br> 
+            non riceveremo un messaggio d'errore, ma ridefiniremo una nostra versione della funzione.
+
+
 
         </div> 
     </div>
 </body>
-<script src="script.js"></script>
-<script src="script2.js"></script>
 </html>
