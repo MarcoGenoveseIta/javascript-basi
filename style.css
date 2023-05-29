@@ -7,7 +7,7 @@
 }
 
 html, body{
-    cursor: not-allowed;
+    cursor:none;
     color: rgb(225, 225, 225);
     background-color: rgb(17, 17, 17);
     height: 100%;
@@ -17,37 +17,37 @@ html, body{
 }
 
 .contenitore-primario{
-    
     height: 100%;
     width: 900px;
     margin: auto;
     display: grid;
     grid-template-rows: auto 1fr;
+    -webkit-box-shadow: 0px 0px 25px 8px #ff0404; 
+    box-shadow: 0px 0px 25px 8px #ff1010 ;
 }
 
 .testos{
     font-family: 'Titillium Web', sans-serif;
-    cursor:auto;
-    padding-left:15px;
-    padding-bottom: 15px;
-    font-size:larger;
+    cursor: auto;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    font-size: larger;
     color: rgb(215, 215, 215);
     background-color: rgb(39, 39, 39);
     overflow: auto;
-    -webkit-box-shadow: 0px 70px 200px 50px #6b6b6b; 
-    box-shadow: 0px 70px 200px 50px #6b6b6b ;
 }
 
 .dati-base{
-    cursor:pointer;
+    cursor: pointer;
     padding-top: 15px;
-    padding-left:15px;
+    padding-left: 15px;
     padding-bottom: 15px;
     padding-right: 15px;
     background-color: rgb(12, 12, 12);
     color: rgb(0, 0, 0);
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .esempio{
@@ -60,7 +60,7 @@ html, body{
     font-family: 'Monomaniac One', sans-serif;
     color: red;
     margin-top: 20px;
-    font-size:x-large;
+    font-size: x-large;
 }
 
 .esercizio{
@@ -91,7 +91,7 @@ html, body{
 }
 
 .nome{
-    font-size:small;
+    font-size: small;
     font-family: 'Audiowide', cursive;
     cursor: help;
     color: rgb(223, 223, 223);
