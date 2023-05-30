@@ -34,7 +34,8 @@ html, body{
     position: relative;
     z-index: 1000;
     height: 100%;
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     margin: auto;
     display: grid;
     grid-template-rows: auto 1fr;
@@ -64,7 +65,7 @@ html, body{
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    align-items:center;
+    align-items:center; 
 }
 
 .titolo{
@@ -128,7 +129,6 @@ html, body{
     cursor: help;
     color: #23f5cb;
     font-family: 'Audiowide', cursive;
-    margin-left: 200px;
     align-items: center;
 }
 
