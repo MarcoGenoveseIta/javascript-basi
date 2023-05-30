@@ -13,10 +13,16 @@
     <title>JavaScript Base</title>
 </head>
 <body>
+    <div id="sfondo">
+        <img src="spazio2.jpg" alt="">
+    </div>
     <div class="contenitore-primario">
         <div class="dati-base">
-            <a href="https://github.com/MarcoGenoveseIta/javascript-basi" class="nome">Marco</a>
-            <div> <a href="https://www.google.com/search?client=firefox-b-d&q=cosa+%C3%A8+javascript" class="titos">JavaScript Basi</div>
+            <a href="https://github.com/MarcoGenoveseIta/javascript-basi" target="_blank" class="nome">
+                <img class="img" src="pngegg.png">
+                Marco
+            </a>
+            <div><a href="https://www.google.com/search?client=firefox-b-d&q=cosa+%C3%A8+javascript" class="titos">JavaScript Basi</div>
             <a href="https://www.google.com/search?q=maggio+2023&client=firefox-b-d&sxsrf=APwXEdf1y5AHnAkXH05frZdY1iQhqYUOsA%3A1684825452385&ei=bGVsZImPF_T97_UP7PWJmAQ&ved=0ahUKEwiJ9eP074r_AhX0_rsIHex6AkMQ4dUDCA4&uact=5&oq=maggio+2023&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMggIABCABBCxAzIFCAAQgAQyCwgAEIAEELEDEIMBMgsIABCABBCxAxCDATIFCAAQgAQyBQgAEIAEMgsIABCKBRCxAxCDATIFCAAQgAQ6CggAEEcQ1gQQsAM6AggmOggIABAWEB4QDzoICAAQFhAeEAo6BggAEBYQHkoECEEYAFCuBFjFDmCFEGgBcAF4AIABaYgB9AKSAQMzLjGYAQCgAQHIAQTAAQE&sclient=gws-wiz-serp" class="data">05/2023</a>
         </div>
             
@@ -26,9 +32,7 @@
 
             in javascript ci sono 5 tipi di dati primitivi:<br>
             numeri, stringhe, boleani, null e undefinde e gli oggetti.<br>
-            javascript converte un primitivo nel corrispondente oggetto
-        
-            <p class = esempio>esempio:</p>
+            javascript converte un primitivo nel corrispondente oggetto <br> <br>
         
             <div class="es"><code class = esercizio>var nomeMaiuscolo = "Marco".toUpperCase();<br>
             console.log({nomeMaiuscolo});<br><br>
@@ -42,9 +46,7 @@
             
             <p class = "titolo">STRINGHE IN JAVASCRIPT</p>
             
-            una stringa è una sequenza di caratteri delimitata da dopppi o singoli apici<br>
-            
-            <p class = esempio>esempio:</p>
+            una stringa è una sequenza di caratteri delimitata da dopppi o singoli apici<br> <br>
             
             <div class="es"><code class = esercizio>var stringaNum1 = ("stringa num 1");<br>
             var stringaNum2 = ('stringa num 2');<br><br>
@@ -53,9 +55,7 @@
             
             <p class = "titolo">NUMERI IN JAVASCRIPT</p>
             
-            javascript ha un unico tipo di dato numerico. ciè non c'è distinzione formale, esempio tra intero e decimale
-            
-            <p class = esempio>esempio:</p>
+            javascript ha un unico tipo di dato numerico. ciè non c'è distinzione formale, esempio tra intero e decimale <br> <br>            
             
             <div class="es"><code class = esercizio>var interoNegativo = -3;<br>
             var zero = 0;<br>
@@ -78,9 +78,7 @@
 
             javascript prevete 2 tipi di dato speciali per rappresentare valori nulli e non definiti.<br>
             il tipo dato null prevede  il solo valore null, che rapresenta un valore che non rientra tra i tipi di dato <br>
-            del linguaggi.
-            
-            <p class = esempio>esempio:</p>
+            del linguaggi. <br> <br>           
             
             <div class="es"><code class = esercizio>var x = (null); <br> console.log({x});</code></div><br>
             
@@ -95,11 +93,9 @@
             javascript è un linguaggio a tipizzazione depore o dinamica. significa che quando dichiariamo una variabile, <br>
             non ne specifichiamo il tipo di dato che può contenere, può cambaire durante lo script.<br>
             quando dichiariamo una variabile senza specifichedi un valore, a questa ciene assegnato il valore undefined. <br>
-            il valore può cambaire tramite le nostre istruzionied assumere tipi diversi di dato.
+            il valore può cambaire tramite le nostre istruzionied assumere tipi diversi di dato. <br> <br>           
             
-            <p class = esempio>esempio:</p>
-            
-            <div class="es"><code class = esercizio>var miaVariabile;<br>
+            <div class="es"><code class = "esercizio">var miaVariabile;<br>
             miaVariabile = 3;<br>
             miaVariabile = null;<br>
             miaVariabile = "tre";<br>
@@ -110,9 +106,7 @@
             
             <p class = "titolo">ESPRESSIONIE OPERATORI</p>
             
-            un espressione è una combinazione di valori, variabili ed operatori che rappresentano un valore
-            
-            <p class = esempio>esempio:</p>
+            un espressione è una combinazione di valori, variabili ed operatori che rappresentano un valore <br> <br>           
             
             <div class="es"><code class = esercizio>x + 1</code></div><br>
             
@@ -124,10 +118,8 @@
             <p class = "titolo">OPERATORI ARITMETICI</p>
             
             per quel che riguarda il tipo di dato numerico, abbiamo gli operatori aritmetici, che consentono la <br>
-            combinazione di valori numerici.
-            
-            <p class = esempio>esempio:</p>
-            
+            combinazione di valori numerici. <br> <br>
+                    
             <div class="es"> <code>
                 <table>
                     <tr><td class="dato">operatore</td><td class="dato">nome</td></tr>
@@ -137,10 +129,8 @@
                     <tr><td class="dato">*<td class="dato">moltiplicazione</td></td>
                     <tr><td class="dato">%<td class="dato">modulo o resto</td></td>
                 </table>
-            </code></div>
-
-            <p class = esempio>esempio:</p>
-        
+            </code></div> <br>
+     
             <div class="es"><code class = esercizio>9/4<br>9%4 + 5 + 10</code></div> <br>
         
             seguono le regole di precedenza matematica<br><br>
@@ -162,10 +152,8 @@
             negativo del valore numerico rappresentato dalla variabilex.<br>
             gli operatori incrementano e decrementano sono applicabili soltanto a variabili e consentono di <br>
             ottenere un valore rispettivamente aumentato o diminuito di uno.<br>
-            viene eseguita prima della valutazione
-
-            <p class = esempio>esempio:</p>
-        
+            viene eseguita prima della valutazione <br> <br>
+     
             <div class="es"><code class = esercizio>var x = (3);<br>var y = (x++);<br>console.log({x} + {y})</code></div><br>
 
             il valore della variabile x verrà assegnato alal variabile y e soltanto sucessivamente x verrà incrementato <br>
@@ -188,10 +176,9 @@
                     <tr><td class="dato">!==<td class="dato">estremamente diverso</td></td>
                 </table>     
             </code>   </div><br> 
+
             le espressioni che utilizzano gli operatori relazionari restuituiscono ub valore booleano in base <br> 
-            all' esito del confronto.
-        
-            <p class = esempio>esempio:</p>
+            all' esito del confronto. <br> <br>
         
             <div class="es"><code class = esercizio>4 > 2 //true<br>5 != 4 + 1 //folse</code> </div><br>
         
@@ -205,9 +192,7 @@
                     <tr><td class="dato">||<td class="dato">or</td></td>
                     <tr><td class="dato">!<td class="dato">not</td></td>
                 </table>
-            </code></div>           
-        
-            <p class = esempio>esempio:</p>
+            </code></div>     <br>     
         
             <div class="es"><code class = esercizio>(5 > 2) && (3 !=4) // true<br>
             true || (4 >= 6) // true<br>
@@ -216,8 +201,7 @@
             <p class = "titolo">OPERATORI DI ASSEGNAMENTO</p>
             
             l' espressione di assegnamento restituisce essa stessa un valore dell' espressione assegnata alla variabile:
-            
-            <p class = esempio>esempio:</p>
+                <br> <br>
             
             <div class="es"><code class = esercizio>x = 3 + 5;<br>
             y = (x = 3 + 5);<br>
@@ -235,13 +219,10 @@
             
             oltre all (=), esistono altri operatori di assegnamento derivanti dalla combinazione degli operatori <br>
             aritmetici e degli operatori sui bit con il simbolo =. <br>
-            essi rappresentano uanabbreviazione <br>
-            
-            <p class = esempio>esempio:</p>
+            essi rappresentano uanabbreviazione <br> <br>
             
             <div class="es"><code class = esercizio>x += 3;</code></div>
-            
-            <p class = esempio>equivalente:</p>
+        
             
             <div class="es"><code class = esercizio>x = x + 3;</code></div><br>
             
@@ -269,39 +250,29 @@
         
             <div class="es"><code class = esercizio>"piano" + "forte" // "pianoforte"</code></div>
         
-            <p class = esempio>esempio:</p>
-        
             <div class="es"><code class = esercizio>var strumento1 = "piano";<br>
             var strumento2 = "forte";<br><br>
             console.log({strumento1} + {strumento2});</code></div><br>
-            
-            <p class = esempio>oppure:</p>
             
             <div class="es"><code class = esercizio>var strumento= "piano";<br>
             strumento += "forte";<br>
             console.log({strumento})</code></div><br>
             
             il suo utilizzo è abbastanza immediato, ma con le variabili si possono ottenere risultati non <br>
-            prebisti dal momento che il simbolo utilizato è lo stesso dell' addizione.
-            
-            <p class = esempio>esempio:</p>
+            prebisti dal momento che il simbolo utilizato è lo stesso dell' addizione. <br> <br> 
             
             <div class="es"><code class = esercizio>x + y</code></div>
             
             <p class = "titolo">CONVERSIONI TRA TIPI DI VARIABILI</p>
             
-            effettua conversioni implicite
-            
-            <p class = esempio>esempio:</p>
+            effettua conversioni implicite <br> <br>
             
             <div class="es"><code class = esercizio>var x = "12";<br>    
             var y = "13";<br>
             var calcolo =  x * y;<br><br>
             console.log({calcolo})</code></div><br>
             
-            conversione implicita delle variabili in booleano
-            
-            <p class = esempio>esempio:</p>
+            conversione implicita delle variabili in booleano <br> <br>
             
             <div class="ess"><code class="esercizio">(3) {<br><br>
                 console.log("vero")<br>
@@ -356,17 +327,13 @@
             - ifa alternativa (else)<br>
             - if a cascata (if esle if else)</code></div> <br>
             
-            la forma if pura esegue un blocco di codice solo se una condizione è vera:
-            
-            <p class = esempio>esempio:</p>
+            la forma if pura esegue un blocco di codice solo se una condizione è vera: <br> <br>            
             
             <div class="es"><code class = esercizio>if (condizione) {<br>istruzioni<br>
             }</code></div><br>
             dove condizione è un'espressione booleana e istruzioni rappresenta appunto la sequenza di <br>
             istruzioni da eseguire nel caso in cui la condizione sia veraif eslse:<br>
-            if eslse viene eseguito un blocco di codice oppure un altro valore delal condizione: <br>
-        
-            <p class = esempio>esempio:</p>
+            if eslse viene eseguito un blocco di codice oppure un altro valore delal condizione: <br> <br>
         
             <div class="es"><code class = esercizio>if: (condizione) {<br>
                 istruzioni1<br>
@@ -377,9 +344,7 @@
             Se condizione è vera vengono eseguite le istruzioni del blocco istruzioni1 altrimenti viene eseguito <br>
             il blocco istruzioni2<br>
             if a cascata:<br>
-            mette a disposizione più alternative:
-        
-            <p class = esempio>esempio:</p>
+            mette a disposizione più alternative: <br> <br>
 
             <div class="es"><code class = esercizio>if (condizione1) {<br>
                 istruzioni1<br>
@@ -390,11 +355,9 @@
             }</code></div><br>
         
             In questo caso, se condizione1 è vera viene eseguito il blocco istruzioni1.<br>
-             Se condizione1 non è soddisfatta viene verificata condizione2 e in base al suo valore <br>
-             verrà eseguito il blocco istruzioni2 o istruzioni3<br>
-            le if si usano per dare condizione eistruzioni per cambiare variare le opzioni <br>
-        
-            <p class = esempio>esempi pratici:</p>
+            Se condizione1 non è soddisfatta viene verificata condizione2 e in base al suo valore <br>
+            verrà eseguito il blocco istruzioni2 o istruzioni3<br>
+            le if si usano per dare condizione eistruzioni per cambiare variare le opzioni <br> <br>
         
             <div class="es">if:<br>
             <code class = esercizio>if else:<br> if (x >= 37) {<br>
@@ -425,18 +388,14 @@
             
             <p class="titolo">WHILE E DO-WHILE, LE INTERAZIONE BASE</p>
             
-            javascript prevede al classiche istruzioni di itatazione come while e for<br>
-            
-            <p class="esempio">esempio:</p>
-            
+            javascript prevede al classiche istruzioni di itatazione come while e for<br> <br>
+         
             <div class="es"><code class = esercizio>while (condizione) {<br>
             //istruzioni<br>
             }</code></div><br>
         
             Requisito fondamentale nell'uso del while è che le istruzioni contenute nel blocco di codice <br>
-            modifichino la condizione, altrimenti si rischia di incorrere in un ciclo infinito <br>
-        
-            <p class="esempio">esempio:</p>
+            modifichino la condizione, altrimenti si rischia di incorrere in un ciclo infinito <br> <br>
 
             <div class="es"><code class = esercizio>var y = 1;<br>
             ver i = 1;<br>
@@ -450,10 +409,8 @@
 
             <p class="titolo">DO-WHILE</p>
         
-            Una variante del while è il do...while 
-        
-            <p class="esempio">esempio:</p>
-        
+            Una variante del while è il do...while  <br> <br>
+
             <div class="es"><code class = esercizio>do { <br>
                 // istruzioni <br>
             } <br>
@@ -465,9 +422,7 @@
 
             gli array sono lo stile numerate in oggetti anche di tipo diverso <br>
             consentono di associare più valori ad un unico variabile. <br>
-            l'uso di array evita di definire più variabili e semplifica  lo svolgimento di operazioni <br>
-
-            <p class="esempio">esempio:</p>
+            l'uso di array evita di definire più variabili e semplifica  lo svolgimento di operazioni <br> <br>
 
             <div class="es"><code class = esercizio>var giorniDellaSettimana = [ <br>
                 "lunedì", <br>
@@ -479,84 +434,62 @@
                 "domenica"];</code></div> <br>
 
             questo è un modo di definire un array basato sulla rappresentazione letterale <br>
-            dopo aver definito un arrat possiamo accedere ai singoli elementi <br>
-
-            <p class="esempio">esempio:</p>
+            dopo aver definito un arrat possiamo accedere ai singoli elementi <br> <br>
 
             <div class="es"><code class = esercizio>var primoGiorno = giorniDellaSettimana[0];</code></div><br>
 
-            si può fare anche con più elementi
-
-            <p class="esempio">esempio:</p>
+            si può fare anche con più elementi <br> <br>
 
             <div class="es"><code class = esercizio>var terzoGiorno = giorniDellaSettimana[2]; <br>
                 var settimoGiorno = giorniDellaSettimana[6];</code></div>
 
             <p class="titolo">DEFINIRE UN ARRAY</p>
 
-            un array può essere vuoto, cioè senza elementi, ed rappresentato dalle sole quadre ([]) <br>
-
-            <p class="esempio">esempio:</p>
+            un array può essere vuoto, cioè senza elementi, ed rappresentato dalle sole quadre ([]) <br> <br>
 
             <div class="es"><code class = esercizio>var myArray = [,"elemento"];</code></div> <br>
 
             otterremo un array con due elementi di cui il primo e un undegìfined. <br> 
-            se invece l' elemento finale non è indicato:
-
-            <p class="esempio">esempio:</p>
+            se invece l' elemento finale non è indicato: <br> <br>
 
             <div class="es"><code class = esercizio>var myArray = ["elemento", "altroelemento",];</code></div> <br>
 
             javascript ignorerà l'ultima virgola generando un array di due soli elementi <br>
-            gli elementi di un array possono essere di qualsiasi tipo di dato previsto da javascript <br>
-
-            <p class="esempio">esempio:</p>
+            gli elementi di un array possono essere di qualsiasi tipo di dato previsto da javascript <br> <br>
 
             <div class="es"><code class = esercizio>var myArray = [123, "stringa", true, null];</code></div> <br>
 
-            ci possono essere array dentro array
-
-            <p class="esempio">esempio:</p>
+            ci possono essere array dentro array <br> <br>
 
             <div class="es"><code class = esercizio>var myArray = [123, "stringa", ["a", "b", 99]];</code></div> <br>
 
             un questo caso epr accedera a 99 dovremmo accedere prima al terzo alemento principale <br>
-            poi al terzo elemento dell' array contenuto un esso: <br>
-
-            <p class="esempio">esempio:</p>
+            poi al terzo elemento dell' array contenuto un esso: <br> <br>
 
             <div class="es"><code class = esercizio>var novantanove = myArray[2][2];</code></div> 
             
             <p class="titolo">ARRAY MULTIDIMENSIONALI</p>
 
             la presenza di array come elementi di altri array ci consente di definire <br> 
-            array multidimensionali o matrici.
-
-            <p class="esempio">esempio:</p>
+            array multidimensionali o matrici. <br> <br>
 
             <div class="es"><code class = esercizio>var matrice = [[24, 13, 1], [48, 92, 17], [8, 56, 11]]</code></div> <br>
 
-            per accedere al num 48 indicheremo le sue coordinate:
-
-            <p class="esempio">esempio:</p>
+            per accedere al num 48 indicheremo le sue coordinate: <br> <br>
 
             <div class="es"><code class = esercizio>var quarantotto = matrice[1][0];</code></div>
 
             <p class="titolo">DESTRUTTURAZIONE DELL' ASSEGNAMENTO</p>
 
             sfruttanto un meccanismo chiamato destrutturazione dell' assegnamento possiammo riscrivere <br> 
-            assegnamenti:
-            
-            <p class="esempio">esempio:</p>
+            assegnamenti: <br> <br>
 
             <div class="es"><code class = esercizio>var [primoGiorno,,terzoGiorno,,,,settimoGiorno] = giorniDellaSettimana;</code> </div> 
 
             <p class="titolo">I CICLI FOR</p>
 
             un alternativa al while è l'istruzione for <br>
-            generalmente intesa come un blocco di codice numero determinato più volte <br>
-            
-            <p class="esempio">esempio:</p>
+            generalmente intesa come un blocco di codice numero determinato più volte <br> <br>
 
             <div class="es"><code class = esercizio>for (inizializzazione; condizione; modifica) { <br>
                 // istruzioni <br>
@@ -568,10 +501,8 @@
 
             - al termine di ciascuna iterazione viene eseguita l'istruzione modifica <br> <br>
 
-            in questo caso è responsabilità nostra <br>
+            in questo caso è responsabilità nostra <br> <br>
             
-            <p class="esempio">esempio:</p>
-
             <div class="es"><code class = esercizio>var y = 1; <br>
                 var i; <br>
                 for (i = 1; i <=4; i++) { <br>
@@ -579,9 +510,9 @@
                 }</code></div> <br>
 
             abbiamotrasposto gli elementi del while all' interno dello schema sintattico del for <br>
-            il for è generalmente comodo per effettuare operazioni sugli array, ciclando tra gli elementi <br>
+            il for è generalmente comodo per effettuare operazioni sugli array, ciclando tra gli elementi <br> <br>
 
-            <p class="esempio">esempio:</p>
+
 
             <div class="es"><code class = esercizio>var quantita = [12, 34, 45, 7, 19]; <br>
                 var totale = 0; <br>
@@ -593,9 +524,7 @@
             <p class="titolo">INIZIALLIZZAZIONI MULTIPLE O VUOTE</p>
 
             l' istruzione for è molto flessibile infatti possiamo <br> 
-            inserire nelle sezioni inizializzazione e modifica anche gruppi di istruzioni separati da virgole <br>
-
-            <p class="esempio">esempio:</p>
+            inserire nelle sezioni inizializzazione e modifica anche gruppi di istruzioni separati da virgole <br>  <br>
 
             <div class="es"><code class = esercizio>var y; <br>
                 var i; <br>
@@ -603,9 +532,7 @@
                     y = y * i; <br>
                 }</code></div> <br>
 
-            Possiamo ad esempio, scrivere il nostro ciclo in questo modo del tutto equivalente <br>
-
-            <p class="esempio">esempio:</p>
+            Possiamo ad esempio, scrivere il nostro ciclo in questo modo del tutto equivalente <br> <br>
 
             <div class="es"><code class = esercizio>var y = 1; <br>
                 var i = 1; <br>
@@ -613,9 +540,7 @@
                     y = y * i; <br>
                 }</code></div> <br>
             
-            fino ad arrivare ad una situazione del genere sintatticamente quasi identica <br>
-
-            <p class="esempio">esempio:</p>
+            fino ad arrivare ad una situazione del genere sintatticamente quasi identica <br> <br>
 
             <div class="es"><code class = esercizio>var y = 1; <br>
                 var i = 1; <br>
@@ -628,9 +553,7 @@
 
             Per lavorare più comodamente con gli array JavaScript prevede due varianti <br> 
             del for: il for...in e il for...of. Vediamo come come scrivere le istruzioni precedenti <br> 
-            facendo uso del for...in
-
-            <p class="esempio">esempio:</p>
+            facendo uso del for...in <br> <br>
 
             <div class="es"><code class = esercizio>var quantita = [12, 34, 45, 7, 19]; <br>
                 var totale = 0; <br>
@@ -647,8 +570,6 @@
 
             <p class="titolo">DEFINIRE UNA FUNZIONE JAVACSRIPT</p>
 
-            <p class="esempio">esempio:</p>
-
             <div class="es"><code class = esercizio>function nome(argomenti) { <br>
                 // istruzioni <br>
                 }</code></div> <br>
@@ -660,8 +581,6 @@
 
             <p class="titolo">JS: INVOCARE UNA FUNZIOEN</p>
 
-            <p class="esempio">esempio:</p>
-
             <div class="es"><code class = esercizio>nome(valori);</code></div> <br>
 
             dove nome è il nome della funzione e valori è una lista opzionale di espressioni separata da virgole. <br>
@@ -669,9 +588,7 @@
             <p class="titolo">L' ISTRUZZIONE RETURN</p>
 
             Nel corpo della funzione può essere presente l'istruzione return che consente di terminare e restituire un valore <br> 
-            al codice che l'ha chiamata
-
-            <p class="esempio">esempio:</p>
+            al codice che l'ha chiamata <br> <br>
 
             <div class="es"><code class = esercizio>function somma() { <br>
                 var z = 11 + 5;  <br>
@@ -680,8 +597,7 @@
                 var risultato = somma();</code></div> <br>
 
             In questo esempio abbiamo definito una funzione senza argomenti che somma due interi e restituisce il risultato
-
-            <p class="esempio">esempio:</p>
+            <br> <br>
 
             <div class="es"><code class = esercizio>var risultato = 5 + somma() * 2;</code></div> <br>
 
@@ -690,9 +606,7 @@
             <p class="ARGOMENTI O PARAMETRI DI UNA FUNZIONE"></p>
 
             La funzione somma() che abbiamo definito prima è in grado di sommare soltanto i due numeri fissati nel <br> 
-            blocco di istruzioni
-
-            <p class="esempio">esempio:</p>
+            blocco di istruzioni <br> <br>
 
             <div class="es"><code class = esercizio>function somma(x, y) { <br>
                 var z = x + y; <br>
@@ -700,8 +614,7 @@
                 }</code></div> <br>
 
             In questo caso i valori da sommare verranno passati alla funzione somma() al momento dell'invocazione:
-
-            <p class="esempio">esempio:</p>
+            <br> <br>
 
             <div class="es"><code class = esercizio>var risultato = somma(11, 5);</code></div>
 
@@ -711,9 +624,7 @@
             flessibilità ci consente di fare delle cose che talvolta possono apparire abbastanza strane <br> <br>
 
             In altre parole, data la definizione della funzione somma() con i due argomenti da sommare, <br> 
-            possiamo invocare la funzione nei seguenti modi
-
-            <p class="esempio">esempio:</p>
+            possiamo invocare la funzione nei seguenti modi <br> <br>
 
             <div class="es"><code class = esercizio>var risultato1 = somma(11); <br>
                 var risultato2 = somma(); <br>
@@ -726,9 +637,7 @@
 
             Una analoga flessibilità l'abbiamo anche nella dichiarazione degli argomenti quando definiamo <br> 
             una funzione. Ad esempio, possiamo non definire alcun argomento nella definizione di somma() <br> 
-            ed accedere ai valori passati in fase di chiamata tramite un array speciale predefinito: arguments.
-
-            <p class="esempio">esempio:</p>
+            ed accedere ai valori passati in fase di chiamata tramite un array speciale predefinito: arguments. <br> <br>
 
             <div class="es"><code class = esercizio>function somma() { <br>
                 var z = arguments[0] + arguments[1]; <br>
@@ -738,9 +647,7 @@
             In questo caso non specifichiamo gli argomenti a fianco al nome della funzione, ma accediamo ad <br> 
             essi sfruttando questo array predefinito. <br> <br>
 
-            possiamo sommare un numero indefinito di valori:
-
-            <p class="esempio">esempio:</p>
+            possiamo sommare un numero indefinito di valori: <br> <br>
 
             <div class="es"><code class = esercizio>function somma() { <br>
                 var z = 0; <br>
@@ -751,9 +658,7 @@
                 return z; <br>
                 }</code></div> <br>
 
-            In questo modo potremo chiamare la funzione per sommare un qualsiasi numero di valori:
-
-            <p class="esempio">esempio:</p>
+            In questo modo potremo chiamare la funzione per sommare un qualsiasi numero di valori: <br> <br>
 
             <div class="es"><code class = esercizio>somma(2, 78); <br>
             somma(17, 32, 4, 19, 52);</code> </div>
@@ -761,7 +666,7 @@
             <p class="titolo">ARGOMENTI CON VALORI DI DEFAULT</p>
 
             arricchiscono la flessibilità della gestione degli argomenti di una funzione. <br> 
-            In particolare viene introdotta la possibilità di specificare dei valori di default:
+            In particolare viene introdotta la possibilità di specificare dei valori di default: <br> <br>
 
             <div class="es"><code class = esercizio>function somma(x = 0, y = 0) { <br>
                 var z = x + y; <br>
@@ -771,13 +676,11 @@
             In questo modo se al momento della chiamata non viene passato un argomento, <br> 
             ad esso viene assegnato il valore di default specificato, invece del valore undefined.
 
-            <p class="JAVACSRIPT: REST PARAMETER, ARGOMENTI AGGIUNTIVI"></p>
+            <p class="titolo">JAVACSRIPT: REST PARAMETER, ARGOMENTI AGGIUNTIVI</p>
 
             Supponiamo di voler definire una funzione che implementa diverse operazioni <br> 
             aritmetiche e prende come primo argomento il nome dell'operazione da eseguire <br> 
-            ed a seguire un numero variabile di valori su cui effettuare l'operazione.
-
-            <p class="esempio">esempio:</p>
+            ed a seguire un numero variabile di valori su cui effettuare l'operazione. <br> <br>
 
             <div class="ess"><code class = esercizio>function eseguiOperazione(x, ...y) { <br>
                 var z = 0; <br>
@@ -812,9 +715,7 @@
 
             L'approccio è simile all'array predefinito arguments, ma mentre questo <br>
             cattura tutti gli argomenti della funzione, il rest parameter cattura soltanto <br> 
-            gli argomenti in più rispetto a quelli specificati singolarmente
-
-            <p class="esempio">esempio:</p>
+            gli argomenti in più rispetto a quelli specificati singolarmente <br> <br>
 
             <div class="es"><code class = esercizio>eseguiOperazione("somma", 12, 54, 2, 7, 12); <br>
                 eseguiOperazione("moltiplica", 4, 11, 32); <br>
@@ -825,16 +726,12 @@
             secondo e terzo argomento, ignorando gli altri <br> <br>
 
             La stessa notazione del rest parameter può essere utilizzata nelle <br> 
-            chiamate a funzioni che prevedono diversi argomenti
-
-            <p class="esempio">esempio:</p>
+            chiamate a funzioni che prevedono diversi argomenti <br> <br>
 
             <div class="es"><code class = esercizio>var addendi = [8, 23, 19, 72, 3, 39]; <br>
                 somma(...addendi);</code></div> <br>
 
-            La chiamata con lo spread operator è equivalente alla seguente chiamata: 
-
-            <p class="esempio">esempio:</p>
+            La chiamata con lo spread operator è equivalente alla seguente chiamata: <br> <br>
 
             <div class="es"><code class = esercizio>somma(8, 23, 19, 72, 3, 39);</code></div>
 
@@ -844,9 +741,7 @@
             tramite l'istruzione return. <br> <br>
 
             Se una funzione non ha un valore da restituire, infatti, può omettere il return <br> 
-            o presentare l'istruzione senza un valore esplicito
-
-            <p class="esempio">esempio:</p>
+            o presentare l'istruzione senza un valore esplicito <br> <br>
 
             <div class="es"><code class = esercizio>function msg(messaggio) { <br>
                 alert(messaggio); <br>
@@ -860,9 +755,7 @@
             Se proviamo ad assegnare ad una variabile il valore restituito in entrambi <br> 
             i casi otterremo il valore undefined <br> <br>
 
-            L'effetto dell'esecuzione di return è la terminazione della funzione e la restituzione di un valore
-
-            <p class="esempio">esempio:</p>
+            L'effetto dell'esecuzione di return è la terminazione della funzione e la restituzione di un valore <br> <br>
 
             <div class="ess"><code class = esercizio>function decodifica(numero) { <br>
                 switch(numero) { <br>
@@ -885,9 +778,7 @@
             una corrispondenza con l'argomento, quindi le istruzioni break sarebbero superflue nel caso specifico <br> <br>
 
             Tuttavia è buona norma limitare il numero di return presenti in una funzione, riducendoli possibilmente a <br> 
-            uno soltanto
-
-            <p class="esempio">esempio:</p>
+            uno soltanto <br> <br>
 
             <div class="ess"><code class = esercizio>function decodifica(numero) { <br>
                 var risultato; <br>
@@ -919,9 +810,7 @@
             che sono accessibili soltanto all'interno del suo corpo. <br> <br>
 
             Le variabili dichiarate fuori da qualsiasi funzione sono dette globali e sono accessibili <br> 
-            da qualsiasi punto dello script, anche all'interno di funzioni
-
-            <p class="esempio">esempio:</p>
+            da qualsiasi punto dello script, anche all'interno di funzioni <br> <br>
 
             <div class="es"><code class = esercizio>var x = 10; <br>
                 var y; <br>
@@ -941,9 +830,7 @@
 
             Variabili locali e globali possono avere lo stesso nome, ma in questo caso si vengono a creare <br> 
             delle ambiguità la cui risoluzione dipende dalla regola secondo cui si fa riferimento <br> 
-            all'ambito di visibilità più vicino all'utilizzo della variabile
-
-            <p class="esempio">esempio:</p>
+            all'ambito di visibilità più vicino all'utilizzo della variabile <br> <br>
 
             <div class="es"><code class = "esercizio">var x = 10; <br>
                 var y; <br>
@@ -961,9 +848,7 @@
             più vicino all'uso della variabile <br> <br>
 
             indipendentemente dal punto in cui viene dichiarata una variabile, essa <br> 
-            esiste in tutto lo scope a cui appartiene
-
-            <p class="esempio">esempio:</p>
+            esiste in tutto lo scope a cui appartiene <br> <br>
 
             <div class="es"><code class ="esercizio"> var x = 10; <br>
                 var y; <br>
@@ -981,9 +866,7 @@
             è ancora undefined <br> <br>
 
             In altre parole, nel seguente esempio la variabile y è accessibile anche al di fuori del blocco <br> 
-            associato all'istruzione if
-
-            <p class="esempio">esempio:</p>
+            associato all'istruzione if <br> <br>
 
             <div class="es"><code class ="esercizio">function rendiPari(x) { <br>
                 if (x%2 != 0) { <br>
@@ -1001,9 +884,7 @@
             <p class="titolo">LET</p>
 
             Se invece abbiamo bisogno di creare uno scope specifico per una o più variabili possiamo <br> 
-            ricorrere all'istruzione let  
-
-            <p class="esempio">esempio:</p>
+            ricorrere all'istruzione let <br> <br>
 
             <div class="es"><code class ="esercizio">var x = 10; <br>
                 var y; <br>
@@ -1017,9 +898,7 @@
             nasconde quella esterna dichiarata con var <br> <br>
 
             Un ambito in cui è senz'altro utile utilizzare l'istruzione let è nelle iterazioni, come <br> 
-            ad esempio nel for
-
-            <p class="esempio">esempio:</p>
+            ad esempio nel for <br> <br>
 
             <div class="es"><code class ="esercizio">var x = 0; <br>
                 for (let i = 0; i < 10; i++) { <br>
@@ -1066,9 +945,7 @@
             In particolare la funzione escape() restituisce la codifica una stringa lasciando inalterate <br> 
             cifre, lettere e i caratteri +-*/._@ e rimpiazzando tutti gli altri caratteri con la codifica <br> 
             esadecimale preceduta da un carattere percentuale (%). Il seguente è un esempio di uso della funzione <br> 
-            escape()
-
-            <p class="esempio">esempio:</p>
+            escape() <br> <br>
             
             <div class="es"><code class ="esercizio">var stringa = escape("Questa è una stringa!");</code></div> <br>
 
@@ -1094,9 +971,7 @@
             hanno un significato speciale <br> <br>
 
             In presenza di un URI utilizziamo la funzione encodeURI() che esclude dalla codifica i <br> 
-            caratteri , /?:@&=+$#
-
-            <p class="esempio">esempio:</p>
+            caratteri , /?:@&=+$# <br> <br>
 
             <div class="es"><code class ="esercizio">var escapedURI = escape("https://www.html.it/a b.html"); <br>
                 var encodedURI = encodeURI("https://www.html.it/a b.html");</code></div> <br>
@@ -1110,14 +985,12 @@
             <p class="titolo">ENCODEURI E DECIDEURI</p>
 
             La funzione encodeURIComponent() codifica anche i caratteri speciali esclusi dalla encodeURI(). <br> 
-            Essa è pensata per codificare i valori di eventuali parametri passati in un URI
-
-            <p class="esempio">esempio:</p>
+            Essa è pensata per codificare i valori di eventuali parametri passati in un URI <br> <br>
 
             <div class="es"><code class ="esercizio">var param = encodeURIComponent("Che cos'è?"); <br>
                 var encodedURI = encodeURI("https://www.html.it/a b.php?x=") + param;</code></div>
 
-            <p class="esempio">Il valore finale della variabile encodedURI sarà:</p>
+            Il valore finale della variabile encodedURI sarà: <br> <br>
 
             <div class="es"><code class ="esercizio">https://www.html.it/a%20b.php?x=Che%20cos'%C3%A8%3F</code></div> <br>
 
@@ -1130,9 +1003,7 @@
 
             Tra le funzioni predefinite, eval() ha un ruolo controverso. <br> 
             Essa prende come argomento una stringa e la valuta o la esegue come se fosse codice JavaScript. <br>
-            La stringa può rappresentare un'espressione o una serie di istruzioni
-
-            <p class="esempio">esempio:</p>
+            La stringa può rappresentare un'espressione o una serie di istruzioni <br> <br>
 
             <div class="es"><code class ="esercizio">var x = eval("5 + 1"); <br>
                 var z = eval("x + 1"); <br>
@@ -1167,9 +1038,7 @@
 
             per modificare la scrittura degli errori si usa try con catch, in modo tale che da una stringa di <br>
             errore normale esca esempio questo è un errore. usando queste funzioni si può fare vedere <br>
-            l' errore sul display come se fatto a posta.
-
-            <p class="esempio">esempio:</p>
+            l' errore sul display come se fatto a posta. <br> <br>
 
             <div class="es"><code class ="esercizio"> let variabile = 0 <br>
             try { <br>
